@@ -4,7 +4,7 @@ from .tax import vat
 
 
 def money(cents: int) -> str:
-    return f"{cents / 100} EUR"
+    return f"{cents / 100:.2f} EUR"
 
 
 def render(cart: Cart) -> str:
