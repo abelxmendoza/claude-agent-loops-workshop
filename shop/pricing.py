@@ -12,3 +12,11 @@ def total(cart: Cart) -> int:
     """Items, plus VAT on the items, plus shipping. In cents."""
     items = cart.subtotal()
     return items + vat(items) + cart.shipping
+
+
+def percent_of(cents: int, percent: float) -> int:
+    """The amount, in integer cents, that a percentage of cents comes to.
+
+    Rounds down: we never overstate a discount.
+    """
+    return int(cents * percent // 100)
